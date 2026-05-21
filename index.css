@@ -51,3 +51,10 @@
 body {
   margin: 0;
 }
+#dog-bar [data-good-dog="false"]{
+  background-color: red;
+}
+
+#dog-bar [data-good-dog="true"]{
+  background-color: green;
+}
