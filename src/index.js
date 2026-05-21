@@ -33,9 +33,11 @@ function getDoggo(dogSpan) {
     doggoImg.setAttribute('src', doggo.image)
     doggoH2.textContent = doggo.name
     if(doggo.isGoodDog) {
-     doggoBtn.textContent = 'Good Dog!'
+      doggoBtn.textContent = 'Good Dog!'
+      doggoBtn.setAttribute('data-good-dog', 'true')  
     } else {
       doggoBtn.textContent = 'Bad Dog!'
+      doggoBtn.setAttribute('data-good-dog', 'false') 
     }
     doggoBtn.addEventListener('click', () => {
       fetch(baseUrl + doggo.id, {
